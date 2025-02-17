@@ -6,11 +6,9 @@ const port = 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  // ToDo
+  res.send("Request recieved from backend").status(200);
 });
 
 app.listen(port, () => {
-  // ToDo
+  console.log("listening to port...");
 });
-
-module.exports = app;
