@@ -1,0 +1,38 @@
+.form-container {
+    display: block;
+    justify-content: left;
+    text-align: left;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-inline: 60px;
+}
+
+.form-header {
+    font-weight: bold;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+
+.form-text-box {
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 18px;
+    resize: none;
+    color: #242424;
+}
+
+.form-prompt {
+    
+    position: absolute;
+    line-height: 30px;
+    color: #565656;
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 2px;
+    z-index: 2;
+}

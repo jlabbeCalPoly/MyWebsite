@@ -9,6 +9,16 @@ function App() {
   return (
     <>
       <div>
+        <table>
+          <tr>
+            <th>Home</th>
+            <th>About</th>
+            <th>Projects</th>
+            <th>Contact</th>
+          </tr>
+        </table>
+      </div>
+      <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

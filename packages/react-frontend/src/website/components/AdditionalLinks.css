@@ -1,0 +1,36 @@
+.additional-links {
+    padding-top: 10px;
+    display: block;
+    justify-self: center;
+    align-items: left;
+}
+
+.additional-links-header {
+    font-weight: bold;
+    margin: 0;
+}
+
+.additional-links-rows {
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+}
+
+.additional-links-entry {
+    padding-top:4px;
+}
+
+.additional-links-icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.additional-links-link:hover {
+    color: #1f98f4;
+    transform: translateY(-10%);
+    transition: all 0.2s ease-out;
+}
+
+.additional-links-link {
+    text-decoration: none;
+}

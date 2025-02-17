@@ -1,0 +1,16 @@
+.form-footer {
+    margin: 0;
+    padding-inline: 60px;
+}
+
+.form-footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.form-footer-box {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+}

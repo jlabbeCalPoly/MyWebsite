@@ -1,0 +1,40 @@
+:root {
+    --primary: #fff;
+    --ibm-font: "IBM Plex Mono", serif;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    font-family: var(--ibm-font);
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+    padding: 8px 20px,;
+    font-size: 20px;
+}
+
+.btn--large {
+    padding: 12px 26px,;
+    font-size: 20px;
+}
+
+.btn--medium:hover,
+.btn--large:hover {
+    border-color: #1f98f4;
+    color: #1f98f4;
+    transform: translateY(-10%);
+    transition: all 0.2s ease-out;
+}
