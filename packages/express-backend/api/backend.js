@@ -9,11 +9,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("success").status(200);
+  res.status(200).send("success");
 });
 
 app.post("/form", (req, res) => {
-  res.send("fromPost").status(201);
+  res.status(201).send("fromPost")
   /*  const name = req.query.name;
   const email = req.query.email;
   const message = req.query.message;
