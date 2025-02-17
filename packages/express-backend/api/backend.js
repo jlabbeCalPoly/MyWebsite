@@ -13,12 +13,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/form", (req, res) => {
-  const name = req.query.name;
-  const email = req.query.email;
-  const message = req.query.message;
-  if (name != undefined && email != undefined && message != undefined) {
+  let dataToAdd = req.body;
+  if (dataToAdd.name != undefined && dataToAdd.email != undefined && dataToAdd.message != undefined) {
     console.log("correct data");
-    let dataToAdd = req.body;
     services
       .addData(dataToAdd)
       .then((mongoRes) => {
