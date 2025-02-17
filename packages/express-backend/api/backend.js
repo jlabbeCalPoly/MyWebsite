@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.json());
 
-app.get("/backend", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Request recieved").status(200);
 });
 
@@ -13,4 +13,6 @@ app.listen(port, () => {
   console.log("listening to port...");
 });
 
-export default app;
+export default function handler(req, res) {
+  res.status(200).json({ message: "Backend is working!" });
+}
