@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm --prefix ./packages/react-frontend run build",
-    "backend": "node ./packages/express-backend/backend.js",
+    "backend": "node ./packages/api/backend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
