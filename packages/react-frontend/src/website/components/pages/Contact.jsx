@@ -4,15 +4,26 @@ import Form from "../Form.jsx";
 import "./Contact.css";
 
 function Contact() {
-    function submitForm(formData) {
-        const promise = fetch("http://localhost:8000/users", {
+    function postForm(formData) {
+        const promise = fetch("https://test-backend-nine-kappa.vercel.app/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(formData),
           });
-          return promise;
+        return promise;
+    }
+
+
+    function submitForm(formData) {
+        console.log("submitted");
+        postForm(formData)
+        .then((res) => {
+            if (res.status === 200) {
+              console.log("HOLY SHIT IT FUCKING WORKED");
+            }
+        })
     }
 
     return (

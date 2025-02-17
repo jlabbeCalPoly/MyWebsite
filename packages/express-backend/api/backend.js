@@ -1,12 +1,13 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
-const port = 4000;
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Request recieved").status(200);
+  res.send("Request received").status(200);
 });
 
 export default app;
