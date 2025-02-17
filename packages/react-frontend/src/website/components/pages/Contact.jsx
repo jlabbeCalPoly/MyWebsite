@@ -18,8 +18,10 @@ function Contact() {
   function submitForm(formData) {
     console.log("submitted");
     postForm(formData).then((res) => {
-      if (res.status === 200) {
+      if (res.status === 204) {
         console.log("HOLY SHIT IT FUCKING WORKED");
+      } else {
+        console.log("WOMP WOMP BITCH");
       }
     });
   }
