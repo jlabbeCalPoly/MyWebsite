@@ -23,6 +23,7 @@ function Contact() {
         // display submission success page
       } else {
         console.log(res.status);
+        console.log("nay")
         // unsuccessful form submission,
       }
     });

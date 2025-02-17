@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/form", (req, res) => {
-  res.send().status(201);
+  res.status(201);
   /*  const name = req.query.name;
   const email = req.query.email;
   const message = req.query.message;
