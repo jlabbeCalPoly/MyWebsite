@@ -19,9 +19,9 @@ function Contact() {
     console.log("submitted");
     postForm(formData).then((res) => {
       if (res.status === 204) {
-        console.log("HOLY SHIT IT FUCKING WORKED");
+        // display submission success page
       } else {
-        console.log("WOMP WOMP BITCH");
+        // unsuccessful form submission, 
       }
     });
   }
