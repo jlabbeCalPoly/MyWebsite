@@ -18,10 +18,12 @@ function Contact() {
   function submitForm(formData) {
     console.log("submitted");
     postForm(formData).then((res) => {
-      if (res.status === 204) {
+      if (res.status === 201) {
+        console.log("yay");
         // display submission success page
       } else {
-        // unsuccessful form submission, 
+        console.log(res.status);
+        // unsuccessful form submission,
       }
     });
   }
