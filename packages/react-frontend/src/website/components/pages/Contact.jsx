@@ -4,37 +4,35 @@ import Form from "../Form.jsx";
 import "./Contact.css";
 
 function Contact() {
-    function postForm(formData) {
-        const promise = fetch("https://test-backend-nine-kappa.vercel.app/", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
-        return promise;
-    }
+  function postForm(formData) {
+    const promise = fetch("https://backend-wine-psi.vercel.app/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    return promise;
+  }
 
+  function submitForm(formData) {
+    console.log("submitted");
+    postForm(formData).then((res) => {
+      if (res.status === 200) {
+        console.log("HOLY SHIT IT FUCKING WORKED");
+      }
+    });
+  }
 
-    function submitForm(formData) {
-        console.log("submitted");
-        postForm(formData)
-        .then((res) => {
-            if (res.status === 200) {
-              console.log("HOLY SHIT IT FUCKING WORKED");
-            }
-        })
-    }
-
-    return (
-        <>
-        <PageDescription
-            page="CONTACT"
-            description="EMAIL ME AT JLABBE@CALPOLY.EDU OR FILL OUT THE FORM BELOW TO GET IN CONTACT!"
-        />
-        <Form submitForm={submitForm}/>
-        </>
-    );
+  return (
+    <>
+      <PageDescription
+        page="CONTACT"
+        description="EMAIL ME AT JLABBE@CALPOLY.EDU OR FILL OUT THE FORM BELOW TO GET IN CONTACT!"
+      />
+      <Form submitForm={submitForm} />
+    </>
+  );
 }
 
 export default Contact;
