@@ -5,8 +5,8 @@ const port = 3000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Request recieved from backend").status(200);
+app.get("/backend", (req, res) => {
+  res.send("Request recieved").status(200);
 });
 
 app.listen(port, () => {
