@@ -5,7 +5,7 @@ import "./Contact.css";
 
 function Contact() {
   function postForm(formData) {
-    const promise = fetch("https://backend-wine-psi.vercel.app/", {
+    const promise = fetch("https://backend-wine-psi.vercel.app/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

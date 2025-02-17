@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("https://backend-wine-psi.vercel.app/", (req, res) => {
-  res.send("Request received").status(200);
+app.post("/", (req, res) => {
+  res.status(204).send();
 });
 
 export default app;
