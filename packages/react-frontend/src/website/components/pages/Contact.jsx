@@ -16,6 +16,7 @@ function Contact() {
   }
 
   function submitForm(formData) {
+    console.log(formData);
     console.log("submitted");
     postForm(formData).then((res) => {
       if (res.status === 201) {
