@@ -6,7 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
+  res.send("success").status(200);
+});
+
+app.post("/form", (req, res) => {
   res.status(204).send();
 });
 
