@@ -35,7 +35,7 @@ function Navbar() {
             <h3>JULIAN LABBE</h3>
           </li>
           <li className="desc">
-            <h6>GAME DESIGNER</h6>
+            <h6>GAME DEVELOPER</h6>
           </li>
           <li className="desc">
             <h6>WEB DEVELOPER</h6>

@@ -4,7 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import App from "./website/App.jsx"
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  /* strict mode causes your components to render twice 
+     remove for testing our nav functions */
+  <StrictMode> 
     <BrowserRouter>
       <App />
     </BrowserRouter>

@@ -1,184 +1,191 @@
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    position: sticky;
-    z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: sticky;
+  z-index: 999;
 }
 
 .profile {
-    /* positioning/display */
-    display: flex;
+  /* positioning/display */
+  display: flex;
 
-    justify-self: start;
-    align-items: center;
+  justify-self: start;
+  align-items: center;
 
-    /* width/height of the component */
-    width: 300px;
+  /* width/height of the component */
+  width: 300px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    cursor: pointer;
-    z-index: 3;
+  cursor: pointer;
+  z-index: 3;
 }
 
 .profile-pic {
-    /* positioning/display */
-    display: flex;
-    justify-content: left;
+  /* positioning/display */
+  display: flex;
+  justify-content: left;
 
-    /* width/height of the component */
-    width: 60px;
-    padding: 10px;
+  /* width/height of the component */
+  width: 60px;
+  padding: 10px;
 
-    /* border radius adjustment, make the pfp icon a circle */
-    border-radius: 50%;
+  /* border radius adjustment, make the pfp icon a circle */
+  border-radius: 50%;
 }
 
 .profile-desc {
-    /* positioning/display */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center horizontally */
-    list-style: none; /* Remove default bullet points */
-    padding-left: 5px;
+  /* positioning/display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0;
 
-    width: 80%;
-    height: 60%;
+  width: 80%;
+  height: 60%;
 }
 
-.desc h6, h3, li {
-    /* positioning/display */
-    display: flex;
-    justify-content: left; /* Center text horizontally */
-    align-items: center;   /* Center text vertically */
+.desc h6,
+h3,
+li {
+  /* positioning/display */
+  display: flex;
+  justify-content: left; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 
-    width: 100%;
-    margin: 0;             /* remove the padding that was automatically added to the h3 tag */
-    text-align: center;
+  width: 100%;
+  margin: 0; /* remove the padding that was automatically added to the h3 tag */
+  text-align: center;
 }
 
 /* Navigation menu css */
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 45px;
-    list-style: none;
-    text-align: center;
-    width: 420px;
-    margin: 0;
-    margin-right: 15px;
-    justify-content: end;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 45px;
+  list-style: none;
+  text-align: center;
+  width: 420px;
+  margin: 0;
+  margin-right: 15px;
+  justify-content: end;
+}
+
+.nav-menu.active {
+  height: 80px;
 }
 
 .nav-link {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.nav-item {
+  position: relative;
 }
 
 .nav-text {
-    position: relative
+  height: 80px;
+  position: relative;
 }
 
-.nav-text:hover {
-    -webkit-text-fill-color: #1f98f4;
-    transform: translateY(-10%);
-    transition: all 0.2s ease-out;
+.nav-item:hover .nav-text {
+  -webkit-text-fill-color: #1f98f4;
+  transform: translateY(-5%);
+  transition: all 0.2s ease-out;
 }
 
-/* create a custom-sized bar underneath the navigation link */
-.nav-text:hover::after {
-    content: '';                    /* Required to create the pseudo-element */
-    position: absolute;             /* position must be absolute so it doesn't affect the position of other elements */
-    left: 50%;                      /* Start from the middle of the <th> */
-    bottom: -15px;                  /* Place it directly below the text */
-    transform: translateX(-50%);
-    width: 35px;
-    height: 2px;                    /* Set the thickness of the underline */
-    background-color: #1f98f4;   /* Set the color of the underline */
-    transition: all 0.2s ease-out;
+.nav-item:hover::after {
+  content: ""; /* Required to create the pseudo-element */
+  position: absolute; /* position must be absolute so it doesn't affect the position of other elements */
+  left: 50%; /* Start from the middle of the <th> */
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 4px; /* Set the thickness of the underline */
+  background-color: #1f98f4; /* Set the color of the underline */
 }
 
-/* don't display the menu icon while the naviagtion links are present in the navbar */
+/* don't display the menu icon while the navigation links are present in the navbar */
 .menu {
-    display: none;
+  display: none;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 /* Handle the change in navigation format when our screen size falls below a certain threshold */
 @media screen and (max-width: 720px) {
-    .hide {
-        display: flex;
-        position: absolute;
-        height: 80px;
-        width: 100%;
-        background-color: #242424;
-        z-index: 2;
-    }
+  .hide {
+    display: flex;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to left, #1a1a1a, #242424 , #1a1a1a);
+    z-index: 2;
+  }
 
-    .nav-menu {
-        display: block;
-        flex-direction: column;
-       
-        width: 100%;
-        height: 320px;
-        top: -300px;
-        position: absolute;
+  .nav-menu {
+    display: block;
+    flex-direction: column;
 
-        opacity: 1;
-        padding: 0;
-        margin: 0;
-        z-index: 1;
-    }
-      
-    .nav-menu.active {
-          display: block;
-          flex-direction: column;
-          position: absolute;
-          width: 100%;
-          height: 320px;
-          top: 80px;
-          opacity: 1;
-          transition: all 0.5s ease;
-          z-index: 1;
-    }
+    width: 100%;
+    height: 320px;
+    top: -300px;
+    position: absolute;
 
-    .nav-item {
-        padding-top: 15px;
-        padding-bottom: 25px;
-        background-color: #242424;
-        position: relative;
-    }
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
 
-    .nav-link {
-        text-align: center;
-        width: 100%;
-    }
+  .nav-menu.active {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 80px;
+    opacity: 1;
+    background: linear-gradient(to left, #1a1a1a, #242424 , #1a1a1a);
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
 
-    .nav-text {
-        justify-content: center;
-        text-align: center;
-    }
+  .nav-item {
+    position: relative;
+  }
 
-    .menu {
-        display: flex;
+  .nav-link {
+    text-align: center;
+    width: 100%;
+  }
 
-        justify-content: flex-end;
-        align-items: center;
+  .nav-text {
+    justify-content: center;
+    text-align: center;
+  }
 
-        height: 40px;
+  .menu {
+    display: flex;
 
-        margin-right: 10px;
-        cursor: pointer;
-        z-index: 2;
-    }
+    justify-content: flex-end;
+    align-items: center;
 
-    .menu-icon {
-        height: 40px;
-        width: 40px;
-    }
+    height: 40px;
+
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .menu-icon {
+    height: 40px;
+    width: 40px;
+  }
 }

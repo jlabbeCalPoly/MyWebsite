@@ -1,0 +1,101 @@
+.project-header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.project-icon {
+    margin-right: 10px;
+    border-radius: 10%;
+}
+
+/* Container of the header and date text */
+.project-header-text {
+    display: flex;
+    flex-direction: column;
+    height: fit-content
+}
+
+.project-name {
+    line-height: 30px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.project-date {
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-blue-bar {
+    display: flex;
+    width: 3px;
+    background-color: #1f98f4;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.project-bullet-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.project-bullet-icon {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+}
+
+.project-bullet-text {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 14px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 520px) {
+    .project-name {
+        line-height: 18px;
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .project-date {
+        line-height: 18px;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .project-bullet-icon {
+        background-color: #fff;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .project-bullet-text {
+        text-align: left;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        padding-left: 10px;
+    }
+}

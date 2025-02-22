@@ -1,28 +1,46 @@
 :root {
-    --ibm-font: "IBM Plex Mono", serif;
-    --ibm-normal-weight: 500;
-    --ibm-bold-weight: 700;
+  --ibm-font: "Goldman", serif;
+  --ibm-normal-weight: 400;
+  --ibm-bold-weight: 700;
 
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(to left, #1a1a1a, #242424 , #1a1a1a)
 }
 
-h5, h6, p, span, div, input {
-    font-family: var(--ibm-font);
-    font-weight: var(--ibm-normal-weight);
-    color: #fff;
+h5,
+h6,
+p,
+span,
+div,
+input {
+  font-family: var(--ibm-font);
+  font-weight: var(--ibm-normal-weight);
+  color: #fff;
 }
 
-h1, h2, h3 {
-    font-family: var(--ibm-font);
-    font-weight: var(--ibm-bold-weight);
-    color: #fff;
+h2,
+h3 {
+  font-family: var(--ibm-font);
+  font-weight: var(--ibm-bold-weight);
+  color: #fff;
+}
+
+h1 {
+  font-family: var(--ibm-font);
+  font-weight: var(--ibm-bold-weight);
+  color: #fff;
+  line-height: 25px;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 a:visited {
-    color: #fff;
+  color: #fff;
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import PageDescription from "../PageDescription.jsx";
 import Form from "../Form.jsx";
-import "./Contact.css";
 
 function Contact() {
   function postForm(formData) {

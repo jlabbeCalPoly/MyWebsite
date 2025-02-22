@@ -1,6 +1,6 @@
 :root {
     --primary: #fff;
-    --ibm-font: "IBM Plex Mono", serif;
+    --goldman-font: "Goldman", serif;
 }
 
 .btn {
@@ -9,6 +9,16 @@
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+.btn--filled {
+    background-color: #1f98f4;
+    color: #fff;
+    padding: 8px 20px;
+    font-family: var(--ibm-font);
+    font-weight: bold;
+    border: 1px transparent var(--primary);
+    transition: all 0.3s ease-out;
 }
 
 .btn--outline {
@@ -31,10 +41,33 @@
     font-size: 20px;
 }
 
-.btn--medium:hover,
-.btn--large:hover {
+.btn--outline:hover {
     border-color: #1f98f4;
     color: #1f98f4;
     transform: translateY(-10%);
     transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 440px) {
+    .btn--medium {
+        padding: 7px 18px,;
+        font-size: 16px;
+    }
+    
+    .btn--large {
+        padding: 11px 24px,;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .btn--medium {
+        padding: 6px 16px,;
+        font-size: 10px;
+    }
+    
+    .btn--large {
+        padding: 10px 22px,;
+        font-size: 10px;
+    }
 }

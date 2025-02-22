@@ -1,0 +1,20 @@
+.bar {
+    background-color:#1f98f4;
+}
+
+.bar--center {
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    left: 50%;
+    width: 70px;
+    height: 2px; 
+}
+
+.bar--left {
+    position: relative;
+    margin-top: 30px;
+    left: 0;
+    width: 70px;
+    height: 2px; 
+}
